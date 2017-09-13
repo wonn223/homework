@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import url("./reset.css");
+@import url("./normalize.css");
+@import url("./fonts.css");
+.a11y-hidden {
+  position: absolute;
+  left: -9999em;
+}
+
+html {
+  font-size: 10px;
+}
+
+.body {
+  color: #181818;
+  font-size: 1.4rem;
+  font-family: 'Noto Sans Bold', sans-serif;
+  background-color: #fff;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: gray;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #f00;
+  /* outline: 2px solid blue; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+  width: 940px;
+  /* 디폴트는 content-box, 기존의 width 값 안에 보더와 패딩이 포함돼서 계산되게끔 함*/
+  /* 마진은 박스 사이징으로도 포함이 안 됨. auto 계산 : 브라우저 창 너비 - wrapper.width */
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0;
+  background-color: pink;
+  position: absolute;
+  top: 4px;
+  left: 65px;
+}
+
+.header {
+  padding: 0 30px 30px;
+  background-color: #fff;
+  height: auto;
+  position: relative;
+  border-radius: 0 0 50px 50px / 0 0 20px 20px;
+}
+
+
+/* 메인 메뉴 */
+
+.main-menu {
+  background: #d88e04 linear-gradient(to bottom, #bfe8f9 18%, #2aedcf 38%, #2aedcf 61%, #9fd8ef 81%);
+  border-top: 2px solid black;
+  border-radius: 0 0 5px 5px;
+  height: 47px;
+  padding: 0 0 0 250px;
+}
+
+.main-menu>li {
+  float: left;
+  position: relative;
+  background-color: lime;
+}
+
+.main-menu span {
+  display: block;
+  cursor: pointer;
+  font: 1.6rem "Noto Sans Bold", sans-serif;
+  padding: 0 20px;
+  line-height: 45px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.css>img {
+  height: 200px;
+}
+
+.sub-menu {
+  /* background-color: yellow; */
+  position: absolute;
+  top: 47px;
+  /* 부모와 li자식 요소 사이에 있는 빈칸 지우기 상속이 목적인 폰트 사이즈 */
+  font-size: 0;
+  /* width: 500px; */
+  white-space: nowrap;
+}
+
+.sub-menu-active {
+  /* 동적으로 변경될 클래스 강제적으로 생성 */
+  display: block!important;
+}
+
+.sub-menu li,
+.sub-menu a {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+.sub-menu li {
+  background-color: aqua;
+  ;
+}
+
+.sub-menu li:last-child a {
+  margin-right: 0px;
+}
+
+.sub-menu a {
+  /* 헤딩 바깥으로 나가지 않게 패딩 값 조정 */
+  padding: 0px 10px 5px 0;
+  margin: 0 auto;
+  background-color: purple;
+  font: 15px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.main-menu span:hover,
+.main-menu span:focus {
+  color: #ff0;
+  outline: 0;
+}
+
+.main-menu span:hover::after,
+.main-menu span:focus::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+
+.one {
+  display: none;
+}
+
+.two {
+  display: none;
+  left: -100px;
+}
+
+.three {
+  display: none;
+  left: -200px;
+}
+
+
+/* span에 호버링 할 때만 나오는 가상선택자 */
+
+.main-menu span:hover::after,
+.main-menu span:focus::after,
+{
+  content: "";
+  display: block;
+  border-top: 2px solid #000000;
+}
+
+
+/* @keyframes animation {
+  0% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+  }
+  100% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #fefcc9, -20px -20px 40px #feec85, 22px -42px 60px #ffae34, -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+  }
+} */
