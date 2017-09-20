@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url('reset.css');
+.logo {
+  box-sizing: border-box;
+  background: #ACAAAA;
+  height: 485px;
+  width: 485px;
+  position: relative;
+  padding-top: 485px;
+  margin-left: -10px;
+  overflow: hidden;
+}
+
+.ir-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 부모크기에 맞추기 */
+  width: 100%;
+  height: 100%;
+  background: url("./img/sprite.png") 0 0 no-repeat;
+  margin-left: -8px;
+}
+
+.btn-prev,
+.btn-next {
+  background: url("./img/sprite.png") -2px 0 no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  padding: 18px 0 0 0;
+  overflow: hidden;
+  width: 20px;
+}
+
+.btn-next {
+  background-position: 0 -18px;
+}
