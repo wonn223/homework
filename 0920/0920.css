@@ -1,0 +1,89 @@
+@import url("./reset.css");
+.html {
+  font-size: 10px;
+}
+
+body,
+div,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+abbr {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+}
+
+.wrapper {
+  padding: 0 175px 0 110px;
+  margin: 0;
+  position: relative;
+}
+
+.banner-heading {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.list {
+  font-size: 1.2rem;
+  color: white;
+  background-color: olivedrab;
+}
+
+.anchor,
+.anchor a {
+  font-size: 1.2rem;
+  /* background-color: gray; */
+  line-height: 2;
+  height: 30px;
+  overflow: hidden;
+  transition: all 2s ease-in-out;
+}
+
+.anchor:hover,
+.anchor:focus {
+  padding-left: 10px;
+  background-color: powderblue;
+  height: 200px;
+}
+
+.login-heading {
+  font-family: "Noto Sans Bold";
+  font-size: 1.3rem;
+  height: 30px;
+  color: white;
+  background-color: olivedrab;
+}
+
+.login-form {
+  font-size: 1.2rem;
+  /* background-color: gray; */
+  line-height: 2;
+  height: 30px;
+  transition: all 2s ease-in-out;
+  overflow: hidden;
+}
+
+.login-form:hover,
+.login-form:focus {
+  padding-left: 10px;
+  background-color: powderblue;
+  height: 150px;
+}
